@@ -2,7 +2,7 @@ import './navigation.css';
 
 function Navigation() {
 	return (
-		<p>Navigation</p>
+		<p>Logo, About Us, Contant Us, Play</p>
 	);
 }
 

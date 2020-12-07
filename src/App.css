@@ -3,7 +3,7 @@
   width: 100%;
   display: block;
   left: 0;
-  background: #b6b3b091;
+  background: rgba(2, 16, 24, 0.829);
   box-sizing: border-box;
   overflow: auto;
 }
@@ -13,9 +13,14 @@
   width: 100%;
   display: block;
   left: 0;
-  background: rgba(2, 16, 24, 0.829);
+  background: rgb(182, 179, 177);
   box-sizing: border-box;
   overflow: auto;
+  background-image: url("assets/img/Cartoon\ v2");
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: bottom;
+  background-size: 100vh;
 }
 
 .fill-screen-3 {
@@ -23,7 +28,7 @@
   width: 100%;
   display: block;
   left: 0;
-  background: #b6b3b091;
+  background: rgba(2, 16, 24, 0.829);
   box-sizing: border-box;
   overflow: auto;
 }
@@ -33,7 +38,7 @@
   width: 100%;
   display: block;
   left: 0;
-  background: rgba(2, 16, 24, 0.829);
+  background: rgb(182, 179, 177);
   box-sizing: border-box;
   overflow: auto;
 }
