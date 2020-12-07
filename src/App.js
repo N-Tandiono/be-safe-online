@@ -16,16 +16,40 @@ function App() {
 				</header>
 			</div>
 			<div className="fill-screen-2">
-				Hello
+				<header className="home-title">
+					<span>
+						<h1>Purpose</h1>
+						<p>There are constant threats on the internet. Sadly, Anti-virus and Firewalls do not always protect the user from these threats.</p>
+						<p>Stay Safe Online aims to educate users of these threats, reducing the risk exposure</p>
+					</span>
+				</header>
 			</div>
 			<div className="fill-screen-3">
-				Hello
+				<span>
+					<h1>Values</h1>
+					<ul>
+						<li>Effective Learning</li>
+						<li>Fun and Engaging</li>
+						<li>Gamified Solution</li>
+						<li>Life-Skills</li>
+						<li>For all Ages</li>
+						<li>Self-Paced</li>
+						<li>Real-life Experiences</li>
+						<li>Basics of Security</li>
+					</ul>
+				</span>
 			</div>
 			<div className="fill-screen-4">
-				Hello
+				<span>
+					<h1>Statistics</h1>
+					<p>Pie chart image</p>
+					<p>Talk about statistics</p>
+				</span>
 			</div>
 			<footer>
-				Okay this is the bottom, thanks
+				Okay this is the bottom, thanks :)
+				<br/>
+				More for the Footer in the future
 			</footer>
 		</>
 	);
