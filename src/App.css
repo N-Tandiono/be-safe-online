@@ -1,0 +1,39 @@
+.fill-screen-1 {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  left: 0;
+  background: #b6b3b091;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.fill-screen-2 {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  left: 0;
+  background: rgba(146, 140, 75, 0.575);
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.fill-screen-3 {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  left: 0;
+  background: rgba(23, 85, 121, 0.671);
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.fill-screen-4 {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  left: 0;
+  background: rgba(4, 73, 41, 0.733);
+  box-sizing: border-box;
+  overflow: auto;
+}
