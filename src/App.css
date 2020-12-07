@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .fill-screen-1 {
   height: 100vh;
   width: 100%;
@@ -41,4 +45,81 @@
   background: rgb(182, 179, 177);
   box-sizing: border-box;
   overflow: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.left-column {
+  background-color: orange;
+  height: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.right-column {
+  background-color: orange;
+  height: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px sold black;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid black;
+  height: 60px;
+  width: 60px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
 }

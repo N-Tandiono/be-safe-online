@@ -4,8 +4,8 @@ import Navigation from './components/navigation/navigation';
 function App() {
 	return (
 		<>
+			<Navigation />
 			<div className="fill-screen-1">
-				<Navigation />
 				<header className="home-title">
 					<span>
 						<h1>Be Safe Online</h1>
@@ -13,30 +13,73 @@ function App() {
 						<p>A <b>gamified solution</b> to teaching kids on the <b>dos and don'ts</b> of using the web</p>
 					</span>
 					<button>Explore</button>
+					<a href="#about">
+						<div className="scroll-down"></div>
+					</a>
 				</header>
 			</div>
-			<div className="fill-screen-2">
-				<header className="home-title">
-					<span>
-						<h1>Purpose</h1>
-						<p>There are constant threats on the internet. Sadly, Anti-virus and Firewalls do not always protect the user from these threats.</p>
-						<p>Stay Safe Online aims to educate users of these threats, reducing the risk exposure</p>
-					</span>
-				</header>
-			</div>
+			<section id='about'>
+				<div className="fill-screen-2">
+					<header className="home-title">
+						<span>
+							<h1>Purpose</h1>
+							<p>There are constant threats on the internet. Sadly, Anti-virus and Firewalls do not always protect the user from these threats.</p>
+							<p>Stay Safe Online aims to educate users of these threats, reducing the risk exposure</p>
+						</span>
+					</header>
+				</div>
+			</section>
 			<div className="fill-screen-3">
 				<span>
 					<h1>Values</h1>
-					<ul>
-						<li>Effective Learning</li>
-						<li>Fun and Engaging</li>
-						<li>Gamified Solution</li>
-						<li>Life-Skills</li>
-						<li>For all Ages</li>
-						<li>Self-Paced</li>
-						<li>Real-life Experiences</li>
-						<li>Basics of Security</li>
-					</ul>
+					<div class='row'>
+						<div class='column'>
+						<div class='left-column'>
+							Effective Learning
+						</div>
+						</div>
+						<div class='column'>
+						<div class='right-column'>
+							Fun and Engaging
+						</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='column'>
+						<div class='left-column'>
+							Gamified Solution
+						</div>
+						</div>
+						<div class='column'>
+						<div class='right-column'>
+							Life-Skills
+						</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='column'>
+						<div class='left-column'>
+							For all Ages
+						</div>
+						</div>
+						<div class='column'>
+						<div class='right-column'>
+							Self-Paced
+						</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='column'>
+						<div class='left-column'>
+							Real-life Experiences
+						</div>
+						</div>
+						<div class='column'>
+						<div class='right-column'>
+							Basics of Security
+						</div>
+						</div>
+					</div>
 				</span>
 			</div>
 			<div className="fill-screen-4">
