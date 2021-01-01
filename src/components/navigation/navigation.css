@@ -3,4 +3,53 @@
   width: 100%;
   position: fixed;
   padding: 10px;
+  z-index: 1000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+#logo {
+  float: left;
+  background-color: white;
+  color: black;
+}
+
+#about {
+  float: left;
+  background-color: white;
+  color: black;
+}
+
+#contact {
+  float: left;
+  background-color: white;
+  color: black;
+}
+
+#play {
+  margin-right: 3%;
+  float: right;
+  padding: 10px 25px;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  background-color: rgba(255, 166, 0, 0.562);
+}
+
+#play:hover {
+  background-color: rgba(197, 130, 5, 0.562);
+  transition: 0.2s ease-in-out;
 }

@@ -10,10 +10,14 @@ html {
   background: rgba(2, 16, 24, 0.829);
   box-sizing: border-box;
   overflow: auto;
+  background-image: url(/src/assets/img/undraw_connected_world_wuay.svg);
+  background-size: 120% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
 }
 
 .fill-screen-2 {
-  height: 100vh;
+  height: 60vh;
   width: 100%;
   display: block;
   left: 0;
@@ -28,7 +32,7 @@ html {
 }
 
 .fill-screen-3 {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   display: block;
   left: 0;
@@ -80,13 +84,10 @@ html {
 }
 
 .scroll-down {
-  height: 50px;
-  width: 30px;
-  border: 2px sold black;
   position: absolute;
+  background-color: rgba(255, 255, 255, 0);
   left: 50%;
   bottom: 10%;
-  border-radius: 50px;
   cursor: pointer;
 }
 
@@ -122,4 +123,38 @@ html {
     opacity: 0;
     top: 90%;
   }
+}
+
+.home-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.home-title {
+  margin-top: 40%;
+  background-color: rgba(201, 196, 196, 0.952);
+  padding: 35px;
+  border-radius: 10px;
+}
+
+#explore {
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: rgba(5, 121, 5, 0.562);
+}
+
+#explore:hover {
+  background-color: rgba(2, 63, 2, 0.562);
+  transition: 0.25s ease-in-out;
+}
+
+.home-content {
+  margin-top: 8vh;
+}
+
+h1 {
+  text-align: center;
+  text-emphasis: bold;
 }
