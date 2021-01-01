@@ -11,7 +11,7 @@ function Home() {
 							<p>Learn about <b>staying safe online</b> in a <b>fun</b> and <b>engaging</b> way!</p>
 							<p>A <b>gamified solution</b> to teaching kids on the <b>dos and don'ts</b> of using the web</p>
 						</span>
-						<button id='explore'>Explore</button>
+						<a href='#' id='explore'>Explore</a>
 						<a href="#purpose" className="scroll-down"></a>
 					</header>
 					<div id="purpose"></div>
@@ -85,11 +85,6 @@ function Home() {
 					</header>
 				</div>
 			</div>
-			<footer>
-				Okay this is the bottom, thanks :)
-				<br />
-				More for the Footer in the future
-			</footer>
 		</>
 	);
 }

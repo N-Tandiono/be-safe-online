@@ -1,0 +1,47 @@
+.footer-container {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    width: 80%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin-right: 40px;
+}
+
+.footer-container li {
+  display: inline-block;
+  text-align: center;
+}
+
+.footer-links {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#privacy {
+  float: left;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+#privacy:hover {
+  color:rgba(197, 130, 5, 0.562);
+}
+
+#terms {
+  float: left;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+
+#terms:hover {
+  color:rgba(197, 130, 5, 0.562);
+}

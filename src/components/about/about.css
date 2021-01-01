@@ -1,0 +1,49 @@
+.about-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.about-title {
+  margin-top: 120px;
+}
+
+.about-main-container {
+  height: 60vh;
+  width: 100%;
+  display: block;
+  left: 0;
+  background: white;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.about-container .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-container .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.about-container .left-column {
+  height: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.about-container .right-column {
+  height: 20px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
