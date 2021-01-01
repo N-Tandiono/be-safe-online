@@ -1,0 +1,20 @@
+{
+    "title": "categories",
+    "items": [
+        {
+            "category": "Thing One",
+            "description": "Basic",
+            "link": "/Thing One"
+        },
+        {
+            "category": "Thing Two",
+            "description": "Intemediate Level",
+            "link": "/Thing Two"
+        },
+        {
+            "category": "Deception",
+            "description": "Don't be deceived. It's fun.",
+            "link": "/Deception"
+        }
+    ]
+}

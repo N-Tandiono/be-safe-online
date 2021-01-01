@@ -3,8 +3,10 @@ import Navigation from './components/navigation/navigation';
 import Home from './components/home/home';
 import About from './components/about/about';
 import Contact from './components/contact/contact';
+import Play from './components/play/play';
 import Footer from './components/footer/footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import QuestionRoutes from './components/routes/routes';
 
 function App() {
 	return (
@@ -19,8 +21,9 @@ function App() {
 						<Contact />
 					</Route>
 					<Route path="/play">
-						<Home />
+						<Play />
 					</Route>
+					<QuestionRoutes />
 					<Route path="/">
 						<Home />
 					</Route>
