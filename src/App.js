@@ -4,9 +4,9 @@ import Home from './components/home/home';
 import About from './components/about/about';
 import Contact from './components/contact/contact';
 import Play from './components/play/play';
+import Quiz1 from './components/quiz/quiz1';
 import Footer from './components/footer/footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import QuestionRoutes from './components/routes/routes';
 
 function App() {
 	return (
@@ -23,7 +23,34 @@ function App() {
 					<Route path="/play">
 						<Play />
 					</Route>
-					<QuestionRoutes />
+					<Route path="/Thing One">
+						<div className="play-main-container">
+							<div className="play-container">
+								<div className="play-title">
+									<h1>Thing One</h1>
+								</div>
+								<Quiz1 />
+							</div>
+						</div>
+					</Route>
+					<Route path="/Thing Two">
+						<div className="play-main-container">
+							<div className="play-container">
+								<div className="play-title">
+									<h1>Thing Two</h1>
+								</div>
+							</div>
+						</div>
+					</Route>
+					<Route path="/Deception">
+						<div className="play-main-container">
+							<div className="play-container">
+								<div className="play-title">
+									<h1>Deception</h1>
+								</div>
+							</div>
+						</div>
+					</Route>
 					<Route path="/">
 						<Home />
 					</Route>

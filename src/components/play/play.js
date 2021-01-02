@@ -1,5 +1,6 @@
 import './play.css';
 import categories from '../../assets/data/categories.json'
+import React, { useState } from 'react';
 
 function CategoryBlock(props) {
     return (
@@ -24,11 +25,17 @@ function CategoryBlock(props) {
     );
 }
 
-
-
 function Play() {
     const elements = { categories };
     const category_choices = [];
+
+    // Check empty
+    if (localStorage.getItem('quiz_1_progress') == undefined) {
+        localStorage.setItem('quiz_1_progress', 0);
+    }
+
+    const quiz_1_progress = localStorage.getItem('quiz_1_progress');
+
     for (const [_, data] of elements.categories.items.entries()) {
         category_choices.push(
             <CategoryBlock category={data.category} description={data.description} link={data.link} />
