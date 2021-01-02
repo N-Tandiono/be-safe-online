@@ -34,6 +34,8 @@ function Play() {
         localStorage.setItem('quiz_1_progress', 0);
     }
 
+    localStorage.setItem('next', "")
+
     const quiz_1_progress = localStorage.getItem('quiz_1_progress');
 
     for (const [_, data] of elements.categories.items.entries()) {

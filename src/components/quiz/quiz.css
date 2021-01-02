@@ -1,0 +1,40 @@
+.option {
+    padding: 10px;
+    text-align: left;
+    height: 80px;
+    width: 400px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.correct-response {
+    padding: 10px;
+    text-align: left;
+    height: 80px;
+    width: 400px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: rgba(3, 143, 3, 0.623);
+}
+
+.incorrect-response {
+    padding: 10px;
+    text-align: left;
+    height: 80px;
+    width: 400px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: rgba(150, 11, 11, 0.623);
+}
+
+.image-container {
+    width: 100%;
+}
+
+.quiz-image {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
