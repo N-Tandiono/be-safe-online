@@ -1,13 +1,11 @@
 import questions from '../../assets/data/quiz0.json'
-import Quiz1 from '../../components/quiz/quiz0';
+import Quiz from '../../components/quiz/quiz0';
 import Congrats from '../../components/congrats/congrats';
 
-function FetchQuizPage() {
+function FetchQuizPage(props) {
     const data = { questions }
-    const quiz_0_progress = localStorage.getItem('quiz_0_progress');
-    console.log(parseInt(quiz_0_progress))
-    console.log(parseInt(data.questions.quiz0_questions.length))
-    if (parseInt(quiz_0_progress) + 1 > parseInt(data.questions.quiz0_questions.length)) {
+    const quiz_progress = localStorage.getItem('quiz_' + props.quiz_number + '_progress');
+    if (parseInt(quiz_progress) + 1 > parseInt(data.questions.quiz0_questions.length)) {
         return (
             <>
                 <Congrats />
@@ -20,9 +18,9 @@ function FetchQuizPage() {
                 <div className="play-main-container">
                     <div className="play-container">
                         <div className="play-title">
-                            <h1>Thing One {parseInt(quiz_0_progress) + 1}/{data.questions.quiz0_questions.length}</h1>
+                            <h1>{props.name} ({parseInt(quiz_progress) + 1}/{data.questions.quiz0_questions.length})</h1>
                         </div>
-                        <Quiz1 />
+                        <Quiz quiz_number={props.quiz_number} />
                     </div>
                 </div>
             </>

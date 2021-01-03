@@ -28,7 +28,7 @@ function NextButton(props) {
     if (props.show_next) {
         return (
             <>
-                <button onClick={() => goNext()}>Next</button>
+                <button className="next-button" onClick={() => goNext(props.quiz_number)}>Next</button>
             </>
         );
     }
@@ -40,44 +40,44 @@ function NextButton(props) {
     }
 }
 
-function goNext() {
-    const running_progress = localStorage.getItem('quiz_0_progress');
+function goNext(quiz_number) {
+    const running_progress = localStorage.getItem('quiz_' + quiz_number + '_progress');
     window.location.reload();
     localStorage.removeItem('next')
 
-    localStorage.setItem('quiz_0_progress', parseInt(running_progress) + parseInt(1));
+    localStorage.setItem('quiz_' + quiz_number + '_progress', parseInt(running_progress) + parseInt(1));
 }
 
-function Quiz1() {
+function Quiz(props) {
     const data = { questions };
-    const quiz_0_progress = localStorage.getItem('quiz_0_progress');
+    const quiz_progress = localStorage.getItem('quiz_' + props.quiz_number + '_progress');
     const should_next = localStorage.getItem('next')
     const [next, setNext] = useState(<NextButton show_next={should_next} />)
     window.addEventListener("click", function (event) {
         if (localStorage.getItem('next') === 'true') {
-            setNext(<NextButton show_next={true} />)
+            setNext(<NextButton show_next={true} quiz_number={props.quiz_number} />)
         }
     });
     const options = [];
-    for (const [index, elements] of data.questions.quiz0_questions[`${quiz_0_progress}`].options.entries()) {
+
+    for (const [index, elements] of data.questions.quiz0_questions[`${quiz_progress}`].options.entries()) {
         options.push(
             <>
-                <OptionCreation index={index} info={elements} answer={data.questions.quiz0_questions[`${quiz_0_progress}`].answer} />
+                <OptionCreation index={index} info={elements} answer={data.questions.quiz0_questions[`${quiz_progress}`].answer} />
                 <br />
             </>
         )
     }
-
     return (
         <>
             <div className="play-main-container">
                 < div className="play-container" >
                     <div className="image-container">
-                        <img className='quiz-image' src={data.questions.quiz0_questions[`${quiz_0_progress}`].image} alt={data.questions.quiz0_questions[`${quiz_0_progress}`].image_alt} height={data.questions.quiz0_questions[`${quiz_0_progress}`].height} width={data.questions.quiz0_questions[`${quiz_0_progress}`].width} />
+                        <img className='quiz-image' src={data.questions.quiz0_questions[`${quiz_progress}`].image} alt={data.questions.quiz0_questions[`${quiz_progress}`].image_alt} height={data.questions.quiz0_questions[`${quiz_progress}`].height} width={data.questions.quiz0_questions[`${quiz_progress}`].width} />
                     </div>
                     <br />
                     {explainations}
-                    {data.questions.quiz0_questions[`${quiz_0_progress}`].question}
+                    {data.questions.quiz0_questions[`${quiz_progress}`].question}
                     < br />
                     <br />
                     {options}
@@ -90,4 +90,4 @@ function Quiz1() {
 
 
 
-export default Quiz1;
+export default Quiz;

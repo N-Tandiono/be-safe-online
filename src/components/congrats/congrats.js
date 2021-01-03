@@ -15,7 +15,7 @@ function Congrats() {
                         <form action="../play/play.js">
                             <input type="submit" value="Return" />
                         </form>
-                        <button onClick={() => reset()}>Reset</button>
+                        <button className="reset-button" onClick={() => reset()}>Reset</button>
                     </div>
                 </div>
             </div>

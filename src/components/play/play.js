@@ -7,9 +7,9 @@ import questions from '../../assets/data/quiz0.json'
 
 function CategoryBlock(props) {
     var current_location = 'quiz_' + props.index + '_progress'
-    var current_progress = localStorage.getItem(current_location);
+    // var current_progress = localStorage.getItem(current_location);
     const data = { questions }
-    const quiz_0_progress = localStorage.getItem('quiz_0_progress');
+    const quiz_progress = localStorage.getItem(current_location);
 
     return (
         <>
@@ -21,14 +21,11 @@ function CategoryBlock(props) {
                     {props.image}
                 </div>
                 <div className="category-box-description">
-                    <br />
-                    <br />
-
                     <p>{props.description}</p>
                 </div>
                 <div className="category-box-progress">
-                    {(100 / data.questions.quiz0_questions.length * (parseInt(quiz_0_progress))).toFixed(2)}%
-                    <ProgressBar variant="bg-success" now={100 / data.questions.quiz0_questions.length * (parseInt(quiz_0_progress))} />
+                    {(100 / data.questions.quiz0_questions.length * (parseInt(quiz_progress))).toFixed(2)}%
+                    <ProgressBar variant="bg-success" now={100 / data.questions.quiz0_questions.length * (parseInt(quiz_progress))} />
                 </div>
             </a>
         </>
@@ -41,12 +38,15 @@ function Play() {
 
     // Check empty
     if (localStorage.getItem('quiz_0_progress') == undefined) {
-        localStorage.setItem('quiz_0_progress', 0);
+        let number_progress = elements.categories.items.length;
+        console.log(number_progress)
+        for (var i = 0; i < number_progress; i++) {
+            var current_reset = 'quiz_' + i + '_progress'
+            localStorage.setItem(current_reset, 0)
+        };
     }
 
     localStorage.setItem('next', "")
-
-
 
     for (const [index, data] of elements.categories.items.entries()) {
         category_choices.push(

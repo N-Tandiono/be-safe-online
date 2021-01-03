@@ -29,16 +29,10 @@ function App() {
 						<Play />
 					</Route>
 					<Route path="/Thing One">
-						<FetchQuizPage />
+						<FetchQuizPage name="Emails" quiz_number={0} />
 					</Route>
 					<Route path="/Thing Two">
-						<div className="play-main-container">
-							<div className="play-container">
-								<div className="play-title">
-									<h1>Thing Two</h1>
-								</div>
-							</div>
-						</div>
+						<FetchQuizPage name="Thing Two" quiz_number={1} />
 					</Route>
 					<Route path="/Deception">
 						<div className="play-main-container">
