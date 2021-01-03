@@ -1,5 +1,5 @@
 {
-    "quiz1_questions": [
+    "quiz0_questions": [
         {
             "question": "You get an email from your friend. It looks oddly suspicious from the other messages he sends. What should you do?",
             "image": "Fill",
@@ -12,7 +12,8 @@
                 "Preview the pdf, but don't download it. There might be a really funny joke placed inside!",
                 "Leave it alone."
             ],
-            "answer": "1",
+            "answer": 1,
+            "type": 1,
             "explanation": [
                 "Well... if it doesn't seem right maybe go ask someone.",
                 "Correct! Ask your friend, he might have been hacked! Telling your other friends who might have gotten the email may save them.",
@@ -30,7 +31,8 @@
                 "Ignore it",
                 "Yay, free money! Click it!"
             ],
-            "answer": "0",
+            "answer": 0,
+            "type": 1,
             "explanation": [
                 "TODO",
                 "TODO"

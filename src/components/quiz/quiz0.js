@@ -1,7 +1,8 @@
-import questions from '../../assets/data/quiz1.json'
+import questions from '../../assets/data/quiz0.json'
 import './quiz.css'
 import React, { useState } from 'react';
 
+var explainations = []
 function checkAnswer(whats_answered, answer) {
     var id = document.getElementById(whats_answered)
     if (answer === whats_answered && id.className === "option") {
@@ -40,21 +41,16 @@ function NextButton(props) {
 }
 
 function goNext() {
-    const running_progress = localStorage.getItem('quiz_1_progress');
+    const running_progress = localStorage.getItem('quiz_0_progress');
     window.location.reload();
     localStorage.removeItem('next')
-    if (running_progress < 1) {
-        localStorage.setItem('quiz_1_progress', parseInt(running_progress) + parseInt(1));
-    }
-    else {
-        localStorage.setItem('quiz_1_progress', 0);
-    }
+
+    localStorage.setItem('quiz_0_progress', parseInt(running_progress) + parseInt(1));
 }
 
 function Quiz1() {
     const data = { questions };
-    const quiz_1_progress = localStorage.getItem('quiz_1_progress');
-
+    const quiz_0_progress = localStorage.getItem('quiz_0_progress');
     const should_next = localStorage.getItem('next')
     const [next, setNext] = useState(<NextButton show_next={should_next} />)
     window.addEventListener("click", function (event) {
@@ -63,10 +59,10 @@ function Quiz1() {
         }
     });
     const options = [];
-    for (const [index, elements] of data.questions.quiz1_questions[`${quiz_1_progress}`].options.entries()) {
+    for (const [index, elements] of data.questions.quiz0_questions[`${quiz_0_progress}`].options.entries()) {
         options.push(
             <>
-                <OptionCreation index={index} info={elements} answer={data.questions.quiz1_questions[`${quiz_1_progress}`].answer} />
+                <OptionCreation index={index} info={elements} answer={data.questions.quiz0_questions[`${quiz_0_progress}`].answer} />
                 <br />
             </>
         )
@@ -77,10 +73,11 @@ function Quiz1() {
             <div className="play-main-container">
                 < div className="play-container" >
                     <div className="image-container">
-                        <img className='quiz-image' src={data.questions.quiz1_questions[`${quiz_1_progress}`].image} alt={data.questions.quiz1_questions[`${quiz_1_progress}`].image_alt} height={data.questions.quiz1_questions[`${quiz_1_progress}`].height} width={data.questions.quiz1_questions[`${quiz_1_progress}`].width} />
+                        <img className='quiz-image' src={data.questions.quiz0_questions[`${quiz_0_progress}`].image} alt={data.questions.quiz0_questions[`${quiz_0_progress}`].image_alt} height={data.questions.quiz0_questions[`${quiz_0_progress}`].height} width={data.questions.quiz0_questions[`${quiz_0_progress}`].width} />
                     </div>
                     <br />
-                    {data.questions.quiz1_questions[`${quiz_1_progress}`].question}
+                    {explainations}
+                    {data.questions.quiz0_questions[`${quiz_0_progress}`].question}
                     < br />
                     <br />
                     {options}
