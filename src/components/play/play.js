@@ -1,15 +1,21 @@
 import './play.css';
 import categories from '../../assets/data/categories.json'
 import React, { useState } from 'react';
+import ProgressBar from 'react-bootstrap/ProgressBar'
+import 'bootstrap/dist/css/bootstrap.css';
+import questions from '../../assets/data/quiz0.json'
 
 function CategoryBlock(props) {
     var current_location = 'quiz_' + props.index + '_progress'
     var current_progress = localStorage.getItem(current_location);
+    const data = { questions }
+    const quiz_0_progress = localStorage.getItem('quiz_0_progress');
+
     return (
         <>
             <a href={props.link} className="category-box">
                 <div className="category-box-title">
-                    <h1>{props.category}</h1>
+                    <h4>{props.category}</h4>
                 </div>
                 <div className="category-box-image">
                     {props.image}
@@ -18,11 +24,11 @@ function CategoryBlock(props) {
                     <br />
                     <br />
 
-                    <h4>{props.description}</h4>
+                    <p>{props.description}</p>
                 </div>
                 <div className="category-box-progress">
-                    {current_progress}
-                    {/* localstorage progress bar, *TODO* */}
+                    {(100 / data.questions.quiz0_questions.length * (parseInt(quiz_0_progress))).toFixed(2)}%
+                    <ProgressBar variant="bg-success" now={100 / data.questions.quiz0_questions.length * (parseInt(quiz_0_progress))} />
                 </div>
             </a>
         </>

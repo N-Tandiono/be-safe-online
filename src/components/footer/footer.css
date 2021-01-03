@@ -32,6 +32,7 @@ ul {
 }
 
 #privacy:hover {
+  text-decoration: none;
   color:rgba(197, 130, 5, 0.562);
 }
 
@@ -43,5 +44,6 @@ ul {
 }
 
 #terms:hover {
+  text-decoration: none;
   color:rgba(197, 130, 5, 0.562);
 }

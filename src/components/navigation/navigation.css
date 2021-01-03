@@ -23,6 +23,8 @@ a {
 }
 
 #logo {
+  margin-top: 14px;
+  text-decoration: none;
   float: left;
   background-color: white;
   color: black;
@@ -36,6 +38,7 @@ a {
 }
 
 #about:hover {
+  text-decoration: none;
   color:rgba(197, 130, 5, 0.562);
 }
 
@@ -47,6 +50,7 @@ a {
 }
 
 #contact:hover {
+  text-decoration: none;
   color:rgba(197, 130, 5, 0.562);
 }
 
@@ -62,6 +66,13 @@ a {
 }
 
 #play:hover {
+  text-decoration: none;
   background-color: rgba(197, 130, 5, 0.562);
   transition: 0.2s ease-in-out;
+}
+
+.nav-title-heading {
+  display: inline;
+  bottom: 0px;
+  font-size: 25px;
 }

@@ -2,8 +2,9 @@
     "title": "categories",
     "items": [
         {
-            "category": "Thing One",
-            "description": "Basic",
+            "category": "Emails",
+            "description": "Are these Emails safe?",
+            "difficulty": "Easy",
             "link": "/Thing One"
         },
         {

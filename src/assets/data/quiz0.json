@@ -37,6 +37,76 @@
                 "TODO",
                 "TODO"
             ]
+        },
+        {
+            "question": "myGov has sent an email! Thoughts?",
+            "image": "Fill",
+            "height": 90,
+            "width": 300,
+            "image_alt": "Placeholder",
+            "options": [
+                "Safe",
+                "Suspicious"
+            ],
+            "answer": 0,
+            "type": 1,
+            "explanation": [
+                "TODO",
+                "TODO"
+            ]
+        },
+        {
+            "question": "Just a message from Paypal. What should you do?",
+            "image": "Fill",
+            "height": 90,
+            "width": 300,
+            "image_alt": "Placeholder",
+            "options": [
+                "Ignore it",
+                "Log in through the link provided"
+            ],
+            "answer": 1,
+            "type": 1,
+            "explanation": [
+                "TODO",
+                "TODO",
+                "TODO",
+                "TODO"
+            ]
+        },
+        {
+            "question": "True or False: The sender can find out if you open their email?",
+            "image": "Fill",
+            "height": 90,
+            "width": 300,
+            "image_alt": "Placeholder",
+            "options": [
+                "True",
+                "False"
+            ],
+            "answer": 0,
+            "type": 1,
+            "explanation": [
+                "1x1 transparent pixel",
+                "TODO"
+            ]
+        },
+        {
+            "question": "Speak Russian? What do you think of this?",
+            "image": "Fill",
+            "height": 90,
+            "width": 300,
+            "image_alt": "Placeholder",
+            "options": [
+                "Safe",
+                "Suspicious"
+            ],
+            "answer": 0,
+            "type": 1,
+            "explanation": [
+                "TODO",
+                "TODO"
+            ]
         }
     ]
 }
