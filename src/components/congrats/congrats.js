@@ -1,11 +1,11 @@
 import './congrats.css';
 
-function reset() {
+function reset(quiz_number) {
     window.location.reload();
-    localStorage.setItem('quiz_0_progress', 0);
+    localStorage.setItem('quiz_' + quiz_number + '_progress', 0);
 }
 
-function Congrats() {
+function Congrats(props) {
     return (
         <>
             <div className="contact-main-container">
@@ -15,7 +15,7 @@ function Congrats() {
                         <form action="../play/play.js">
                             <input type="submit" value="Return" />
                         </form>
-                        <button className="reset-button" onClick={() => reset()}>Reset</button>
+                        <button className="reset-button" onClick={() => reset(props.quiz_number)}>Reset</button>
                     </div>
                 </div>
             </div>

@@ -7,13 +7,11 @@ import Play from './components/play/play';
 import Quiz1 from './components/quiz/quiz0';
 import Footer from './components/footer/footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import questions from '../src/assets/data/quiz0.json';
 import FetchQuizPage from '../src/components/quiz/current_quiz_page';
+import questions0 from '../src/assets/data/quiz0.json'
+import questions1 from '../src/assets/data/quiz1.json'
 
 function App() {
-	const data = { questions }
-	// { data.questions.quiz0_questions[0].progress }
-	const quiz_0_progress = localStorage.getItem('quiz_0_progress');
 	return (
 		<>
 			<Router>
@@ -29,10 +27,10 @@ function App() {
 						<Play />
 					</Route>
 					<Route path="/Thing One">
-						<FetchQuizPage name="Emails" quiz_number={0} />
+						<FetchQuizPage name="Emails" quiz_number={0} questions={questions0} />
 					</Route>
 					<Route path="/Thing Two">
-						<FetchQuizPage name="Thing Two" quiz_number={1} />
+						<FetchQuizPage name="Thing Two" quiz_number={1} questions={questions1} />
 					</Route>
 					<Route path="/Deception">
 						<div className="play-main-container">

@@ -60,10 +60,10 @@ function Quiz(props) {
     });
     const options = [];
 
-    for (const [index, elements] of data.questions.quiz0_questions[`${quiz_progress}`].options.entries()) {
+    for (const [index, elements] of data.questions.questions[`${quiz_progress}`].options.entries()) {
         options.push(
             <>
-                <OptionCreation index={index} info={elements} answer={data.questions.quiz0_questions[`${quiz_progress}`].answer} />
+                <OptionCreation index={index} info={elements} answer={data.questions.questions[`${quiz_progress}`].answer} />
                 <br />
             </>
         )
@@ -73,11 +73,11 @@ function Quiz(props) {
             <div className="play-main-container">
                 < div className="play-container" >
                     <div className="image-container">
-                        <img className='quiz-image' src={data.questions.quiz0_questions[`${quiz_progress}`].image} alt={data.questions.quiz0_questions[`${quiz_progress}`].image_alt} height={data.questions.quiz0_questions[`${quiz_progress}`].height} width={data.questions.quiz0_questions[`${quiz_progress}`].width} />
+                        <img className='quiz-image' src={data.questions.questions[`${quiz_progress}`].image} alt={data.questions.questions[`${quiz_progress}`].image_alt} height={data.questions.questions[`${quiz_progress}`].height} width={data.questions.questions[`${quiz_progress}`].width} />
                     </div>
                     <br />
                     {explainations}
-                    {data.questions.quiz0_questions[`${quiz_progress}`].question}
+                    {data.questions.questions[`${quiz_progress}`].question}
                     < br />
                     <br />
                     {options}

@@ -1,5 +1,5 @@
 {
-    "quiz0_questions": [
+    "questions": [
         {
             "question": "You get an email from your friend. It looks oddly suspicious from the other messages he sends. What should you do?",
             "image": "Fill",
@@ -106,52 +106,6 @@
             "explanation": [
                 "TODO",
                 "TODO"
-            ]
-        }
-    ],
-    "quiz1_questions": [
-        {
-            "question": "You get an email from your friend. It looks oddly suspicious from the other messages he sends. What should you do?",
-            "image": "Fill",
-            "height": 90,
-            "width": 300,
-            "image_alt": "Placeholder",
-            "options": [
-                "Download and view the pdf! Nothing bad can happen.",
-                "Talk to your friend and see if it was really him who sent it.",
-                "Preview the pdf, but don't download it. There might be a really funny joke placed inside!",
-                "Leave it alone."
-            ],
-            "answer": 1,
-            "type": 1,
-            "explanation": [
-                "Well... if it doesn't seem right maybe go ask someone.",
-                "Correct! Ask your friend, he might have been hacked! Telling your other friends who might have gotten the email may save them.",
-                "Is it worth the risk? Opening a dangerous file might destroy your computer.",
-                "Although it is good to stay safe. Asking around might help your other friends."
-            ]
-        }
-    ],
-    "quiz2_questions": [
-        {
-            "question": "You get an email from your friend. It looks oddly suspicious from the other messages he sends. What should you do?",
-            "image": "Fill",
-            "height": 90,
-            "width": 300,
-            "image_alt": "Placeholder",
-            "options": [
-                "Download and view the pdf! Nothing bad can happen.",
-                "Talk to your friend and see if it was really him who sent it.",
-                "Preview the pdf, but don't download it. There might be a really funny joke placed inside!",
-                "Leave it alone."
-            ],
-            "answer": 1,
-            "type": 1,
-            "explanation": [
-                "Well... if it doesn't seem right maybe go ask someone.",
-                "Correct! Ask your friend, he might have been hacked! Telling your other friends who might have gotten the email may save them.",
-                "Is it worth the risk? Opening a dangerous file might destroy your computer.",
-                "Although it is good to stay safe. Asking around might help your other friends."
             ]
         }
     ]

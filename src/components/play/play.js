@@ -24,8 +24,8 @@ function CategoryBlock(props) {
                     <p>{props.description}</p>
                 </div>
                 <div className="category-box-progress">
-                    {(100 / data.questions.quiz0_questions.length * (parseInt(quiz_progress))).toFixed(2)}%
-                    <ProgressBar variant="bg-success" now={100 / data.questions.quiz0_questions.length * (parseInt(quiz_progress))} />
+                    {(100 / data.questions.questions.length * (parseInt(quiz_progress))).toFixed(2)}%
+                    <ProgressBar variant="bg-success" now={100 / data.questions.questions.length * (parseInt(quiz_progress))} />
                 </div>
             </a>
         </>
@@ -39,7 +39,6 @@ function Play() {
     // Check empty
     if (localStorage.getItem('quiz_0_progress') == undefined) {
         let number_progress = elements.categories.items.length;
-        console.log(number_progress)
         for (var i = 0; i < number_progress; i++) {
             var current_reset = 'quiz_' + i + '_progress'
             localStorage.setItem(current_reset, 0)
