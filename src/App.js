@@ -26,14 +26,14 @@ function App() {
 					<Route path="/play">
 						<Play />
 					</Route>
-					<Route path="/Thing One">
+					<Route path="/emails">
 						<FetchQuizPage name="Emails" quiz_number={0} questions={questions0} />
 					</Route>
-					<Route path="/Thing Two">
+					<Route path="/emails v2">
 						<FetchQuizPage name="Thing Two" quiz_number={1} questions={questions1} />
 					</Route>
 					<Route path="/Deception">
-						<FetchQuizPage name="Deception" quiz_number={1} questions={questions2} />
+						<FetchQuizPage name="Deception" quiz_number={2} questions={questions2} />
 					</Route>
 					<Route path="/">
 						<Home />

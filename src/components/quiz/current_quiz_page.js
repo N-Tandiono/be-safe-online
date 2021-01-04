@@ -19,7 +19,7 @@ function FetchQuizPage(props) {
                         <div className="play-title">
                             <h1>{props.name} ({parseInt(quiz_progress) + 1}/{data.questions.length})</h1>
                         </div>
-                        <Quiz quiz_number={props.quiz_number} />
+                        <Quiz quiz_number={props.quiz_number} question={props.questions} />
                     </div>
                 </div>
             </>

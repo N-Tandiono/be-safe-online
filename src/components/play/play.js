@@ -7,6 +7,24 @@ import questions0 from '../../assets/data/quiz0.json'
 import questions1 from '../../assets/data/quiz1.json'
 import questions2 from '../../assets/data/quiz2.json'
 
+
+function ShowImage(props) {
+    console.log(props.image)
+
+    if (props.image != 'None') {
+        return (
+            <>
+                <img className='quiz-image' src={props.image} alt={props.alt} height={props.height} width={props.width} />
+            </>
+        )
+    }
+    return (
+        <>
+        </>
+    )
+}
+
+
 function CategoryBlock(props) {
     var current_location = 'quiz_' + props.index + '_progress'
 
@@ -23,7 +41,7 @@ function CategoryBlock(props) {
         data = questions2
     }
 
-    console.log(data.questions.length)
+
     const quiz_progress = localStorage.getItem(current_location);
 
     return (
@@ -33,7 +51,7 @@ function CategoryBlock(props) {
                     <h4>{props.category}</h4>
                 </div>
                 <div className="category-box-image">
-                    {props.image}
+                    <ShowImage image={props.image} />
                 </div>
                 <div className="category-box-description">
                     <p>{props.description}</p>
@@ -64,7 +82,7 @@ function Play() {
 
     for (const [index, data] of elements.categories.items.entries()) {
         category_choices.push(
-            <CategoryBlock category={data.category} description={data.description} link={data.link} index={index} />
+            <CategoryBlock category={data.category} description={data.description} link={data.link} index={index} image={data.image} />
         )
     }
     return (

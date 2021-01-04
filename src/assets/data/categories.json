@@ -3,18 +3,23 @@
     "items": [
         {
             "category": "Emails",
-            "description": "Are these Emails safe?",
+            "image": "TODO",
+            "description": "Are These Emails Safe?",
             "difficulty": "Easy",
-            "link": "/Thing One"
+            "link": "/emails"
         },
         {
-            "category": "Thing Two",
-            "description": "Intemediate Level",
-            "link": "/Thing Two"
+            "category": "Emails v2",
+            "image": "TODO",
+            "description": "You Have More Mail!",
+            "difficulty": "Easy",
+            "link": "/emails v2"
         },
         {
             "category": "Deception",
+            "image": "TODO",
             "description": "Don't be deceived. It's fun.",
+            "difficulty": "Easy",
             "link": "/Deception"
         }
     ]

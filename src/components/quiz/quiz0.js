@@ -48,8 +48,25 @@ function goNext(quiz_number) {
     localStorage.setItem('quiz_' + quiz_number + '_progress', parseInt(running_progress) + parseInt(1));
 }
 
+function ShowImage(props) {
+    if (props.image != 'None') {
+        return (
+            <>
+                <div className="image-container">
+                    <img className='quiz-image' src={props.image} alt={props.alt} height={props.height} width={props.width} />
+                </div>
+            </>
+        )
+    }
+    return (
+        <>
+        </>
+    )
+}
+
 function Quiz(props) {
-    const data = { questions };
+    const data = props.question;
+
     const quiz_progress = localStorage.getItem('quiz_' + props.quiz_number + '_progress');
     const should_next = localStorage.getItem('next')
     const [next, setNext] = useState(<NextButton show_next={should_next} />)
@@ -60,10 +77,10 @@ function Quiz(props) {
     });
     const options = [];
 
-    for (const [index, elements] of data.questions.questions[`${quiz_progress}`].options.entries()) {
+    for (const [index, elements] of data.questions[`${quiz_progress}`].options.entries()) {
         options.push(
             <>
-                <OptionCreation index={index} info={elements} answer={data.questions.questions[`${quiz_progress}`].answer} />
+                <OptionCreation index={index} info={elements} answer={data.questions[`${quiz_progress}`].answer} height={data.questions[`${quiz_progress}`].height} width={data.questions[`${quiz_progress}`].width} />
                 <br />
             </>
         )
@@ -72,12 +89,10 @@ function Quiz(props) {
         <>
             <div className="play-main-container">
                 < div className="play-container" >
-                    <div className="image-container">
-                        <img className='quiz-image' src={data.questions.questions[`${quiz_progress}`].image} alt={data.questions.questions[`${quiz_progress}`].image_alt} height={data.questions.questions[`${quiz_progress}`].height} width={data.questions.questions[`${quiz_progress}`].width} />
-                    </div>
                     <br />
+                    <ShowImage image={data.questions[`${quiz_progress}`].image} alt={data.questions[`${quiz_progress}`].image_alt} />
                     {explainations}
-                    {data.questions.questions[`${quiz_progress}`].question}
+                    {data.questions[`${quiz_progress}`].question}
                     < br />
                     <br />
                     {options}
@@ -87,6 +102,7 @@ function Quiz(props) {
         </>
     );
 }
+
 
 
 
