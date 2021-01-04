@@ -3,12 +3,27 @@ import categories from '../../assets/data/categories.json'
 import React, { useState } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import 'bootstrap/dist/css/bootstrap.css';
-import questions from '../../assets/data/quiz0.json'
+import questions0 from '../../assets/data/quiz0.json'
+import questions1 from '../../assets/data/quiz1.json'
+import questions2 from '../../assets/data/quiz2.json'
 
 function CategoryBlock(props) {
     var current_location = 'quiz_' + props.index + '_progress'
-    // var current_progress = localStorage.getItem(current_location);
-    const data = { questions }
+
+    let data;
+
+    // How can I do this better?
+    if (props.index == 0) {
+        data = questions0
+    }
+    else if (props.index == 1) {
+        data = questions1
+    }
+    else if (props.index == 2) {
+        data = questions2
+    }
+
+    console.log(data.questions.length)
     const quiz_progress = localStorage.getItem(current_location);
 
     return (
@@ -24,8 +39,8 @@ function CategoryBlock(props) {
                     <p>{props.description}</p>
                 </div>
                 <div className="category-box-progress">
-                    {(100 / data.questions.questions.length * (parseInt(quiz_progress))).toFixed(2)}%
-                    <ProgressBar variant="bg-success" now={100 / data.questions.questions.length * (parseInt(quiz_progress))} />
+                    {(100 / data.questions.length * (parseInt(quiz_progress))).toFixed(2)}%
+                    <ProgressBar variant="bg-success" now={100 / data.questions.length * (parseInt(quiz_progress))} />
                 </div>
             </a>
         </>

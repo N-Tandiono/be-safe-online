@@ -4,12 +4,12 @@ import Home from './components/home/home';
 import About from './components/about/about';
 import Contact from './components/contact/contact';
 import Play from './components/play/play';
-import Quiz1 from './components/quiz/quiz0';
 import Footer from './components/footer/footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FetchQuizPage from '../src/components/quiz/current_quiz_page';
 import questions0 from '../src/assets/data/quiz0.json'
 import questions1 from '../src/assets/data/quiz1.json'
+import questions2 from '../src/assets/data/quiz2.json'
 
 function App() {
 	return (
@@ -33,13 +33,7 @@ function App() {
 						<FetchQuizPage name="Thing Two" quiz_number={1} questions={questions1} />
 					</Route>
 					<Route path="/Deception">
-						<div className="play-main-container">
-							<div className="play-container">
-								<div className="play-title">
-									<h1>Deception</h1>
-								</div>
-							</div>
-						</div>
+						<FetchQuizPage name="Deception" quiz_number={1} questions={questions2} />
 					</Route>
 					<Route path="/">
 						<Home />
