@@ -14,7 +14,7 @@ function ShowImage(props) {
     if (props.image != 'None') {
         return (
             <>
-                <img className='quiz-image' src={props.image} alt={props.alt} height={props.height} width={props.width} />
+                <img className='quiz-image' alt={props.alt} height={props.height} width={props.width} src={props.image} />
             </>
         )
     }
@@ -91,7 +91,9 @@ function Play() {
                 <div className="play-container">
                     <div className="play-title">
                         <h1>Choose a Category</h1>
-                        {category_choices}
+                        <div className="category-container">
+                            {category_choices}
+                        </div>
                     </div>
                 </div>
             </div>

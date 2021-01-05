@@ -91,12 +91,14 @@ function Quiz(props) {
                 < div className="play-container" >
                     <br />
                     <ShowImage image={data.questions[`${quiz_progress}`].image} alt={data.questions[`${quiz_progress}`].image_alt} />
-                    {explainations}
-                    {data.questions[`${quiz_progress}`].question}
-                    < br />
-                    <br />
-                    {options}
-                    {next}
+                    <div className="play-section">
+                        {explainations}
+                        {data.questions[`${quiz_progress}`].question}
+                        < br />
+                        <br />
+                        {options}
+                        {next}
+                    </div>
                 </div >
             </div >
         </>
