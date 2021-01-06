@@ -14,7 +14,8 @@ function About() {
 							<div class='left-column'>
 								<br />
 								<br />
-								*TODO*
+								<br />
+								A fun and safe way to learn the existence of cyber threats in the real-world. Created in a way that adding questions is easy to do and data is persistent.
 							</div>
 						</div>
 						<div class='column'>

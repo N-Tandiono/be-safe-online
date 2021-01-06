@@ -1,6 +1,6 @@
 import './play.css';
 import categories from '../../assets/data/categories.json'
-import React, { useState } from 'react';
+import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import 'bootstrap/dist/css/bootstrap.css';
 import questions0 from '../../assets/data/quiz0.json'

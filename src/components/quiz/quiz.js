@@ -1,4 +1,3 @@
-import questions from '../../assets/data/quiz0.json'
 import './quiz.css'
 import React, { useState } from 'react';
 

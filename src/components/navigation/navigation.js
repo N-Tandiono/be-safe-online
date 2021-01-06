@@ -14,7 +14,6 @@ function Navigation() {
 					</li>
 					<br />
 					<li><a href="/about" id="about">About Us</a></li>
-					<li><a href="/contact" id="contact">Contant Us</a></li>
 					<li><a href="/play" id="play">Play</a></li>
 				</ul>
 			</div>

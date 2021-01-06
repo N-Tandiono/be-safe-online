@@ -2,7 +2,6 @@ import './App.css';
 import Navigation from './components/navigation/navigation';
 import Home from './components/home/home';
 import About from './components/about/about';
-import Contact from './components/contact/contact';
 import Play from './components/play/play';
 import Footer from './components/footer/footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -20,19 +19,13 @@ function App() {
 					<Route path="/about">
 						<About />
 					</Route>
-					<Route path="/contact">
-						<Contact />
-					</Route>
 					<Route path="/play">
 						<Play />
 					</Route>
 					<Route path="/emails">
 						<FetchQuizPage name="Emails" quiz_number={0} questions={questions0} />
 					</Route>
-					<Route path="/emails v2">
-						<FetchQuizPage name="Emails v2" quiz_number={1} questions={questions1} />
-					</Route>
-					<Route path="/Deception">
+					<Route path="/deception">
 						<FetchQuizPage name="Deception" quiz_number={2} questions={questions2} />
 					</Route>
 					<Route path="/">
@@ -45,4 +38,7 @@ function App() {
 	);
 }
 
+{/* <Route path="/emails v2">
+	<FetchQuizPage name="Emails v2" quiz_number={1} questions={questions1} />
+</Route > */}
 export default App;

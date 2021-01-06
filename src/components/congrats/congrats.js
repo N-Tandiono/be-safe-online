@@ -8,9 +8,9 @@ function reset(quiz_number) {
 function Congrats(props) {
     return (
         <>
-            <div className="contact-main-container">
-                <div className="contact-container">
-                    <div className="contact-title">
+            <div className="play-main-container">
+                <div className="play-container">
+                    <div className="play-title">
                         <div className="play-section">
                             <span>
                                 <h1><b>Congratulations</b>!</h1>

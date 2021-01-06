@@ -1,4 +1,4 @@
-import Quiz from '../../components/quiz/quiz0';
+import Quiz from './quiz';
 import Congrats from '../../components/congrats/congrats';
 
 function FetchQuizPage(props) {

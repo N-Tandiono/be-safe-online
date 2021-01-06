@@ -11,7 +11,7 @@ function Home() {
 							<p>Learn about <b>staying safe online</b> in a <b>fun</b> and <b>engaging</b> way!</p>
 							<p>A <b>gamified solution</b> to teaching kids on the <b>dos and don'ts</b> of using the web</p>
 						</span>
-						<a href='#' id='explore'>Explore</a>
+						<a href='../play/play.js' id='explore'>Explore</a>
 						<a href="#purpose" className="scroll-down"></a>
 					</header>
 					<div id="purpose"></div>
@@ -23,7 +23,7 @@ function Home() {
 						<span>
 							<h1>Purpose</h1>
 							<p>There are constant threats on the internet. Sadly, Anti-virus and Firewalls do not always protect the user from these threats.</p>
-							<p>Stay Safe Online aims to educate users of these threats, reducing the risk exposure</p>
+							<p>Stay Safe Online aims to educate users of these threats, reducing the risk of exposure</p>
 						</span>
 					</header>
 				</div>
