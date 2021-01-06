@@ -2,7 +2,7 @@
     padding: 10px;
     text-align: left;
     height: 80px;
-    width: 400px;
+    width: 480px;
     border-radius: 6px;
     margin-bottom: 10px;
     background-color: white;
@@ -12,7 +12,7 @@
     padding: 10px;
     text-align: left;
     height: 80px;
-    width: 400px;
+    width: 480px;
     border-radius: 6px;
     margin-bottom: 10px;
     background-color: rgba(3, 143, 3, 0.623);
@@ -22,7 +22,7 @@
     padding: 10px;
     text-align: left;
     height: 80px;
-    width: 400px;
+    width: 480px;
     border-radius: 6px;
     margin-bottom: 10px;
     background-color: rgba(150, 11, 11, 0.623);
@@ -41,5 +41,21 @@
 
 .next-button {
     border-radius: 1px;
+    font-size: 20px;
+    background-color: rgba(255, 145, 0, 0.623);
     border: 1px solid rgba(0, 0, 0, 0.493);
+}
+
+.play-image {
+    margin-top: 20px;
+}
+
+.question-title {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.question-next-button {
+    float: right;
 }

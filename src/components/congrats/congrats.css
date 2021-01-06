@@ -2,3 +2,34 @@
     border-radius: 1px;
     border: 1px solid rgba(0, 0, 0, 0.493);
 }
+
+.play-buttons {
+    margin-top: 30px;
+}
+
+#return {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 3%;
+    font-size: 16px;
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 60px;
+    color: black;
+    background-color: rgba(30, 255, 0, 0.562);
+}
+
+#reset {
+    display: inline-block;
+    margin-right: 3%;
+    font-size: 16px;
+    padding: 6px;
+    height: 40px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color: rgba(219, 23, 23, 0.562);
+}

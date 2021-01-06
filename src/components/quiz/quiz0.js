@@ -28,7 +28,7 @@ function NextButton(props) {
     if (props.show_next) {
         return (
             <>
-                <button className="next-button" onClick={() => goNext(props.quiz_number)}>Next</button>
+                <button className="next-button" onClick={() => goNext(props.quiz_number)}>Next&gt;&gt;</button>
             </>
         );
     }
@@ -88,16 +88,24 @@ function Quiz(props) {
     return (
         <>
             <div className="play-main-container">
-                < div className="play-container" >
-                    <br />
-                    <ShowImage image={data.questions[`${quiz_progress}`].image} alt={data.questions[`${quiz_progress}`].image_alt} />
+                <div className="play-container">
+                    <div className="play-title">
+                        <div className="question-next-button">
+                            {next}
+                        </div>
+                        <h1>
+                            <div className="question-title">
+                                {props.title} ({parseInt(quiz_progress) + 1}/{data.questions.length})
+                            </div>
+                        </h1>
+                    </div>
                     <div className="play-section">
                         {explainations}
-                        {data.questions[`${quiz_progress}`].question}
-                        < br />
-                        <br />
-                        {options}
-                        {next}
+                        <b>{data.questions[`${quiz_progress}`].question}</b>
+                        <div className="play-image">
+                            <ShowImage image={data.questions[`${quiz_progress}`].image} alt={data.questions[`${quiz_progress}`].image_alt} />
+                            {options}
+                        </div>
                     </div>
                 </div >
             </div >

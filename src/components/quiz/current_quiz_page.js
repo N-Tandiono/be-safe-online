@@ -7,21 +7,14 @@ function FetchQuizPage(props) {
     if (parseInt(quiz_progress) + 1 > parseInt(data.questions.length)) {
         return (
             <>
-                <Congrats quiz_number={props.quiz_number} />
+                <Congrats title={props.name} quiz_number={props.quiz_number} />
             </>
         );
     }
     else {
         return (
             <>
-                <div className="play-main-container">
-                    <div className="play-container">
-                        <div className="play-title">
-                            <h1>{props.name} ({parseInt(quiz_progress) + 1}/{data.questions.length})</h1>
-                        </div>
-                        <Quiz quiz_number={props.quiz_number} question={props.questions} />
-                    </div>
-                </div>
+                <Quiz title={props.name} quiz_number={props.quiz_number} question={props.questions} />
             </>
         );
     }

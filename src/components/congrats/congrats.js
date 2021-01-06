@@ -11,11 +11,16 @@ function Congrats(props) {
             <div className="contact-main-container">
                 <div className="contact-container">
                     <div className="contact-title">
-                        <h1>Congratulations!</h1>
-                        <form action="../play/play.js">
-                            <input type="submit" value="Return" />
-                        </form>
-                        <button className="reset-button" onClick={() => reset(props.quiz_number)}>Reset</button>
+                        <div className="play-section">
+                            <span>
+                                <h1><b>Congratulations</b>!</h1>
+                                <p>You Have Completed: <b>{props.title}</b>!</p>
+                            </span>
+                            <div className="play-buttons">
+                                <a href="../play/play.js" id="return">Return</a>
+                                <button id="reset" className="reset-button" onClick={() => reset(props.quiz_number)}>Reset</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
