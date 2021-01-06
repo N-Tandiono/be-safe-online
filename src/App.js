@@ -30,7 +30,7 @@ function App() {
 						<FetchQuizPage name="Emails" quiz_number={0} questions={questions0} />
 					</Route>
 					<Route path="/emails v2">
-						<FetchQuizPage name="Thing Two" quiz_number={1} questions={questions1} />
+						<FetchQuizPage name="Emails v2" quiz_number={1} questions={questions1} />
 					</Route>
 					<Route path="/Deception">
 						<FetchQuizPage name="Deception" quiz_number={2} questions={questions2} />
