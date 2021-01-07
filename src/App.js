@@ -25,6 +25,9 @@ function App() {
 					<Route path="/emails">
 						<FetchQuizPage name="Emails" quiz_number={0} questions={questions0} />
 					</Route>
+					<Route path="/emails v2">
+						<FetchQuizPage name="Emails v2" quiz_number={1} questions={questions1} />
+					</Route>
 					<Route path="/deception">
 						<FetchQuizPage name="Deception" quiz_number={2} questions={questions2} />
 					</Route>
@@ -38,7 +41,4 @@ function App() {
 	);
 }
 
-{/* <Route path="/emails v2">
-	<FetchQuizPage name="Emails v2" quiz_number={1} questions={questions1} />
-</Route > */}
 export default App;
