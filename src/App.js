@@ -4,7 +4,7 @@ import Home from './components/home/home';
 import About from './components/about/about';
 import Play from './components/play/play';
 import Footer from './components/footer/footer';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import FetchQuizPage from '../src/components/quiz/current_quiz_page';
 import questions0 from '../src/assets/data/quiz0.json'
 import questions1 from '../src/assets/data/quiz1.json'
@@ -13,10 +13,10 @@ import questions2 from '../src/assets/data/quiz2.json'
 function App() {
 	return (
 		<>
-			<Router>
+			<HashRouter basename="/be-safe-online/#/">
 				<Navigation />
 				<Switch>
-					<Route path="/about">
+					<Route exact path="/about">
 						<About />
 					</Route>
 					<Route path="/play">
@@ -36,7 +36,7 @@ function App() {
 					</Route>
 				</Switch>
 				<Footer />
-			</Router>
+			</HashRouter>
 		</>
 	);
 }
