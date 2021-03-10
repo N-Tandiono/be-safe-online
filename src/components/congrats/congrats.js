@@ -17,7 +17,7 @@ function Congrats(props) {
                                 <p>You Have Completed: <b>{props.title}</b>!</p>
                             </span>
                             <div className="play-buttons">
-                                <a href="../play/play.js" id="return">Return</a>
+                                <a href="/be-safe-online/#/play" id="return">Return</a>
                                 <button id="reset" className="reset-button" onClick={() => reset(props.quiz_number)}>Reset</button>
                             </div>
                         </div>
